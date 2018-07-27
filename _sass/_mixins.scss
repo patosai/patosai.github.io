@@ -1,0 +1,6 @@
+@import 'vars';
+
+@mixin element-spacing {
+  margin-top: $el-spacing;
+  margin-bottom: $el-spacing;
+}

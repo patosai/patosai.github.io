@@ -1,0 +1,29 @@
+@import 'vars';
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  max-height: 20em;
+  max-width: 100%;
+  &.center {
+    display: block;
+  }
+  &.inline-block {
+    display: inline-block;
+  }
+  &.right {
+    float: right;
+  }
+}
+
+.pre-white-space {
+  white-space: pre;
+}
+
+.text-left {
+  text-align: left;
+}
