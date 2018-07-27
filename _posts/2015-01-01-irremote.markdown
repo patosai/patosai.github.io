@@ -1,0 +1,37 @@
+---
+layout: default
+title:  "IR Remote for a Wiimote Whiteboard"
+date:   2015-01-01 12:00:00 -0500
+permalink: /:categories/:title
+---
+
+My sixth grade science teacher Mr. Perkowski liked to go off on tangents during class.
+
+One of those tangents had to do with Johnny Lee&apos;s Wiimote Whiteboard, a cheap way of getting Smartboard-like capabilities with just a Wiimote, a laptop, and a homemade IR emitter.
+
+A Smartboard is like a projector onto a special board which has special tools so you can use marker-like equipment to draw things on the Smartboard. The problem is that a Smartboard costs thousands of dollars. The Wiimote Whiteboard, however, costs around $40 for the Wiimote and the raw materials for the IR emitter (assuming you have a laptop and projector).
+
+The way it works is that the Wiimote connects to the computer through Bluetooth. The sensor at the head of the Wiimote is actually an IR sensor. If you had a Wii, remember that gray/black flat thing you had to plug in to the Wii? That&apos;s the IR emitter, and the Wiimotes track that source of IR.
+
+In this case, the Wiimote will be tracking our homemade IR emitter. When the IR emitter is activated, the Wiimote tells the computer over Bluetooth where it saw the IR light, and the software will then use that data to move the mouse.
+
+But how do you build the IR emitter?
+
+<img class="img" src='/assets/projects/irremote/wiimote.png' alt='Wiimote mockup' />
+
+The end goal was to build something like this. I would take an old marker and remove the ink cartridge and tip, and in its place put wires, a big battery pack, an IR LED, and a push-button switch.
+
+<img class="img" src='/assets/projects/irremote/remoteschematic.png' alt='Wiimote schematic' />
+
+This was the plan for wiring up the whole thing. Just a simple switch-activated circuit. I convinced my dad to drive me to the nearest RadioShack, where I picked up a soldering iron set and all the required parts for about $10.
+
+The soldering went pretty well. I took things slowly (expected with a burning hot rod in my hands..) and finished the job within the hour.
+
+Now unfortunately nobody in 2007 had a camera, including me. So I don&apos;t really have a picture of the final product.
+
+However, I have given my best shot at editing a picture (Photoshopping as it&apos;s called, but I used GIMP) that looks like the real thing.
+<img class="img" src='/assets/projects/irremote/product.jpg' alt='Wiimote final product' />
+
+There should have been duct tape around the battery pack at the back. But I didn&apos;t put that in because I wanted to show the battery holder and I don&apos;t know how to draw translucent duct tape :(
+
+Anyway, back in class, I showed Mr. P what I had built and spent a few lunches with him getting stuff sent up. After about three or four meetings, he could finally draw stuff using the pen! Mission accomplished.

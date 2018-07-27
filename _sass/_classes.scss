@@ -1,0 +1,196 @@
+@import 'vars';
+
+.center {
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.spacer {
+  width: 100%;
+  height: 2em;
+}
+
+img.img {
+  max-width: 100%;
+  max-height: 40vh;
+  &.center {
+    display: block;
+  }
+  &.inline-block {
+    display: inline-block;
+  }
+  &.right {
+    float: right;
+  }
+}
+
+.pre-white-space {
+  white-space: pre;
+}
+
+.text-left {
+  text-align: left;
+}
+
+// masonry
+.grid {
+  max-width: 800px;
+  margin: 0 auto;
+
+  .grid-item {
+    width: 50%;
+
+    @media (max-device-width: $mobile-max-device-width-photography) {
+      width: 100%;
+    }
+
+    .content {
+      box-sizing: border-box;
+      margin: 0 8px; // masonry appears to add 8px top/bottom
+      img {
+        width: 100%;
+        height: auto;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  display: none;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.9);
+  color: white;
+
+  &.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #modal-close {
+    margin: 16px;
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .modal-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .modal-image-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      .image-wrapper {
+        display: flex;
+        align-items: center;
+        flex: 1
+      }
+
+
+      .info {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        > * {
+          margin: 0.8em 0;
+        }
+
+        #caption {
+          font-size: 1.5em;
+        }
+
+        #location {
+          font-size: 1.2em;
+        }
+
+        .title {
+          margin-right: 4px;
+        }
+
+        .shot-info {
+          margin-left: 4px;
+
+          & > * {
+            margin: 0.5em 0;
+            font-size: 0.8em;
+          }
+
+          .image-info > * {
+            display: inline-block;
+            margin-right: 8px;
+          }
+        }
+
+        .title {
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
+.loading-spinner {
+  $animationDuration: 1.2s;
+  $delayRange: 0.4s;
+  $rectCount: 5;
+  $spinner-margin: 40px auto;
+  $spinner-size: 40px;
+  $spinner-color: white;
+
+  margin: $spinner-margin;
+  width: $spinner-size * 1.25;
+  height: $spinner-size;
+  text-align: center;
+  font-size: 10px;
+
+  .spinner-rect {
+    background-color: $spinner-color;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    animation: waveStretchDelay $animationDuration infinite ease-in-out;
+  }
+
+  @for $i from 1 through $rectCount {
+    .spinner-rect#{$i} { animation-delay: - $animationDuration + $delayRange / ($rectCount - 1) * ($i - 1); }
+  }
+
+  @keyframes waveStretchDelay {
+    0%, 40%, 100% { transform: scaleY(0.4) }
+    20% { transform: scaleY(1.0) }
+  }
+
+}
