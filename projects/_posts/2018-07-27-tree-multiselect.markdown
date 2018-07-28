@@ -2,11 +2,12 @@
 layout: default
 title:  "jQuery Tree Multiselect Plugin"
 date:   2018-07-27 12:48:35 -0700
-categories: projects
+permalink: /:categories/:title:output_ext
 ---
 
 This is a simple replacement for select elements if you have nested/sectioned options. Rather than ramble on some more, I'll just show you the effect. You happen to be on a web page anyway.
 
+The HTML.
 {% highlight html %}
 <select id="demo1" multiple="multiple">
   <option value="one" data-section="top" selected="selected" data-index="3">One</option>
@@ -17,6 +18,7 @@ This is a simple replacement for select elements if you have nested/sectioned op
 </select>
 {% endhighlight %}
 
+And the JavaScript.
 {% highlight javascript %}
 var params = { sortable: true };
 $("select#demo1").treeMultiselect(params);

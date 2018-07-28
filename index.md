@@ -5,10 +5,20 @@
 layout: default
 ---
 
+<h3>Projects</h3>
 <ul>
   {% for post in site.posts %}
-    <li>
+    {% if post.categories contains 'projects' %}
       <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<h3>Posts</h3>
+<ul>
+  {% for post in site.posts %}
+    {% unless post.categories contains 'projects' %}
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    {% endunless %}
   {% endfor %}
 </ul>
