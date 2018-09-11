@@ -9,7 +9,9 @@ layout: default
 <ul>
   {% for post in site.posts %}
     {% if post.categories contains 'projects' %}
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
     {% endif %}
   {% endfor %}
 </ul>
@@ -18,7 +20,9 @@ layout: default
 <ul>
   {% for post in site.posts %}
     {% unless post.categories contains 'projects' %}
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
     {% endunless %}
   {% endfor %}
 </ul>
