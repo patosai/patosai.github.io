@@ -36,7 +36,7 @@ The green keys here are depressed. Say we scan the first row, and the columns ar
 
 ![matrix normal operation](/assets/projects/ex2keyboard/exp-ghosting-current.png)
 
-So the first row was scanned, and it looks like there's current in the second column. Great, that's what was pressed! But here's what else could happen.
+So the first row was scanned, current is running through the second column, so it looks like the switch in the first row second column was pressed, which is what is expected! But here's what else could happen.
 
 ![matrix ghosting issue](/assets/projects/ex2keyboard/exp-ghosting-issue-current.png)
 
@@ -48,4 +48,27 @@ The ultimate fix is to have a diode with every switch to prevent any backwards c
 
 And now things are working as intended. With this in mind, I set on designing my own keyboard.
 
-WIP.
+What I wanted to build
+---
+A sub-$300 split keyboard with Cherry mechanical switches. Would be ergonomic for my hands, with a USB hub to connect peripherals.
+
+Designing the board
+---
+I used Altium Designer to design both halves of my split keyboard. The two halves would be mirrors of each other, with the left side also having a USB hub. I used the ATMega32u4 microcontroller, which has built-in USB support.
+
+Here is an image of the left side.
+![left pcb render](/assets/projects/ex2keyboard/pcb-left-render.jpg)
+
+And an image of the right side.
+![right pcb render](/assets/projects/ex2keyboard/pcb-right-render.jpg)
+
+Of course, one does not simply type on a bare PCB. I needed to design a case. After a few hours in front of Solidworks, I ended up with this.
+
+![left case bottom render](/assets/projects/ex2keyboard/case-leftbottom-render.jpg)
+![left case top render](/assets/projects/ex2keyboard/case-lefttop-render.jpg)
+
+The two halves would sandwich the PCB in the middle, with the switches and keycaps popping through the holes in the top half.
+
+Making it a reality
+---
+WIP
