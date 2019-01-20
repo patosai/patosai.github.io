@@ -7,7 +7,7 @@ permalink: /:categories/:title:output_ext
 
 The first mechanical keyboard I bought was the Das Keyboard 4 Ultimate. I made the leap from regular rubber dome keyboards during my first summer in college after trying out some of my friends' keyboards and decided I liked the Das 4. I highly recommend that keyboard!
 
-Surfing the web for even more niche keyboards, I saw keyboards which had two parts, one for each hand. Probably the most popular of these options is the ![Advantage Kinesis 2](https://www.kinesis-ergo.com/shop/advantage2/), and the ![Keyboardio Model 01](https://shop.keyboard.io/) is another one. The prices for the keyboards in this category seem to be >$300, which made be wonder how much the production cost could really be.
+Surfing the web for even more niche keyboards, I saw keyboards which had two parts, one for each hand. Probably the most popular of these options is the [Advantage Kinesis 2](https://www.kinesis-ergo.com/shop/advantage2/), and the [Keyboardio Model 01](https://shop.keyboard.io/) is another one. The prices for the keyboards in this category seem to be >$300, which made be wonder how much the production cost could really be.
 
 Keyboard basics
 ---
