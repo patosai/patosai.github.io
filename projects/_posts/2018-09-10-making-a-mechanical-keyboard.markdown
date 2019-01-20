@@ -5,32 +5,24 @@ date:   2018-09-10 20:40:00 -0700
 permalink: /:categories/:title:output_ext
 ---
 
-The first mechanical keyboard I bought was the Das Keyboard 4 Ultimate. I made the leap from regular rubber dome keyboards during my first summer in college after trying out some of my friends' keyboards and decided I liked the Das 4. I thought the $130 I paid then was already pretty high, but I was in for a shock when I saw the keyboards which had two halves, one for each hand. They claimed to be ergonomic, and must have been hard to manufacture as well given the 3D shape the circuit board had to accomodate! Nevertheless, $300+ keyboards were not for my taste and I decided to make my own.
+The first mechanical keyboard I bought was the Das Keyboard 4 Ultimate. I made the leap from regular rubber dome keyboards during my first summer in college after trying out some of my friends' keyboards and decided I liked the Das 4. I highly recommend that keyboard!
 
-How does a keyboard work?
+Surfing the web for even more niche keyboards, I saw keyboards which had two parts, one for each hand. Probably the most popular of these options is the ![Advantage Kinesis 2](https://www.kinesis-ergo.com/shop/advantage2/), and the ![Keyboardio Model 01](https://shop.keyboard.io/) is another one. The prices for the keyboards in this category seem to be >$300, which made be wonder how much the production cost could really be.
+
+Keyboard basics
 ---
 
-Let us start with the basic switch. A keyboard consists of a number of keys, 101 in standard keyboards. Each key has a switch underneath which detects when you depress the key. Most of the cheap keyboards today use rubber dome switches, which look like this when you take the keycap off.
+The basic unit of the keyboard is the switch. There are two main types, the rubber dome and the mechanical switch. The rubber domes are the usual kind one finds in office supplied keyboards. Mechanical keyboards are the ones one would usually find in a gaming competition, a PC bang, or the desks of a team that I once interned at where I convinced my mentor to get mechanical keyboards for the entire team.
 
-![an image of rubber dome](/assets/projects/ex2keyboard/exp-rubber-dome-grid.png)
+Because there are so many switches on a keyboard (usually >100), and a limited number of pins on a microcontroller (usually <100), it is more economical to try to arrange the switches in a grid.
 
-You can see how the black conductor under the rubber domes will contact the black conductor fingers on the circuit when the domes are depressed.
+![circuit image of matrix](/assets/projects/ex2keyboard/schematic-matrix.svg)
 
-There are also other kinds of switches, most notably the Cherry mechanical switches. If you've heard of MX Blue or MX Brown, these are the ones. Mechanical switches are larger and more complex but provide better feedback when depressing keys. 
-
-WIP image here.
-
-So there's 101 of these switches. Add a microcontroller so the keyboard can communicate over USB. But each switch can't be individually connected to the the microcontroller (most microcontrollers have less than 50 pins, and the ones that have >100 pins are super expensive and are loaded with other stuff).
-
-![thinking image](/assets/projects/ex2keyboard/exp-switch-micro-wiring-many-how-can.png)
-
-One solution is to use a matrix. Switches are connected to rows and columns, and each row or column is scanned one by one to see which keys are depressed or not.
-
-WIP put some matrix image here.
+Because there are usually more rows than columns on a keyboard (~6 rows and ~20 columns), the rows are set to sink current one at a time and the columns are read in parallel. The columns are set to pull-up, and if the column is low, then the key at the corresponding row and column is pressed. This is repeated for all keys.
 
 One issue with using matrices is the ghosting problem. Ghosting is when keys show up as being pressed even though they were not, due to the physics of the matrix.
 
-![circuit image of matrix](/assets/projects/ex2keyboard/exp-ghosting.png)
+![circuit image of matrix ghosting](/assets/projects/ex2keyboard/exp-ghosting.png)
 
 The green keys here are depressed. Say we scan the first row, and the columns are being read.
 
@@ -47,10 +39,6 @@ The ultimate fix is to have a diode with every switch to prevent any backwards c
 ![ghosting issue fix](/assets/projects/ex2keyboard/exp-ghosting-fix.png)
 
 And now things are working as intended. With this in mind, I set on designing my own keyboard.
-
-What I wanted to build
----
-A sub-$300 split keyboard with Cherry mechanical switches. Would be ergonomic for my hands, with a USB hub to connect peripherals.
 
 Designing the board
 ---
@@ -71,4 +59,14 @@ The two halves would sandwich the PCB in the middle, with the switches and keyca
 
 Making it a reality
 ---
-WIP
+After everything arrived, it was time to solder the prototypes.
+![soldering it together - setup](/assets/projects/ex2keyboard/solder-setup.jpg)
+![soldering it together - bottom done](/assets/projects/ex2keyboard/solder-complete.jpg)
+![soldering it together - with home row switches soldered](/assets/projects/ex2keyboard/switch-home.jpg)
+![soldering it together - with all switches](/assets/projects/ex2keyboard/switch-all.jpg)
+
+I decided to leave the top half of the case off since I thought it would the keyboard too thick. Now, the shots of the completed prototype.
+![the product](/assets/projects/ex2keyboard/product.jpg)
+![the product](/assets/projects/ex2keyboard/product-side.jpg)
+![the product](/assets/projects/ex2keyboard/product-back.jpg)
+
