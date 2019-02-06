@@ -53,10 +53,10 @@ $("select#demo2").treeMultiselect({searchable: true, searchParams: ['section', '
 </script>
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js">
 </script>
-<script src="https://cdn.rawgit.com/patosai/tree-multiselect/v2.5.2/dist/jquery.tree-multiselect.min.js">
+<script src="/assets/projects/tree-multiselect/jquery.tree-multiselect.min.js">
 </script>
 <script>
 $("select#demo1").treeMultiselect({ sortable: true });
 $("select#demo2").treeMultiselect({searchable: true, searchParams: ['section', 'text']});
 </script>
-<link rel="stylesheet" href="https://cdn.rawgit.com/patosai/tree-multiselect/v2.5.2/dist/jquery.tree-multiselect.min.css" />
+<link rel="stylesheet" href="/assets/projects/tree-multiselect/jquery.tree-multiselect.min.css" />
