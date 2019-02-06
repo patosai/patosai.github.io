@@ -1,9 +1,9 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default
 ---
+
+<h3><a href="/about">About</a></h3>
+<h3><a href="/photography">Photography</a></h3>
 
 <h3>Projects</h3>
 <ul>

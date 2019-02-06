@@ -27,3 +27,114 @@ img {
 .text-left {
   text-align: left;
 }
+
+.masonry {
+  column-count: 1;
+  column-gap: 0;
+  grid-column-gap: 0;
+
+  img {
+    margin: 0;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .item {
+    display: inline-block;
+    margin: 5px;
+  }
+}
+
+@media (min-width: 900px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  .masonry {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1900px) {
+  .masonry {
+    column-count: 4;
+  }
+}
+
+.modal {
+  display: none;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.9);
+
+  &.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .modal-inner {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    .info {
+      width: 20%;
+      margin-left: 16px;
+      margin-right: 16px;
+
+      > * {
+        margin: 0.8em 0;
+      }
+
+      #caption {
+        font-size: 1.5em;
+      }
+
+      #location {
+        font-size: 1.2em;
+      }
+
+      .shot-info > * {
+        margin: 0.5em 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .modal {
+    .modal-inner {
+      flex-direction: column;
+
+      .info {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        .title {
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
