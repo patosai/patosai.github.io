@@ -137,3 +137,13 @@ img {
   }
 }
 
+@media (max-width: 500px) {
+  .modal {
+    .modal-inner {
+      .info {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
