@@ -116,9 +116,24 @@ photos:
       }
   });
 
+  function closeModal() {
+    document.getElementById('modal').className = "modal";
+  }
+
   document.getElementById('modal').addEventListener('click', function(ev) {
     if (ev.target.nodeName == "DIV" && ev.target.className == "modal-inner") {
-      document.getElementById('modal').className = "modal";
+      closeModal();
+    }
+  });
+
+  var KEYCODE_MAP = {
+    13: "ENTER",
+    27: "ESC",
+    32: "SPACE"
+  };
+  document.addEventListener('keyup', function(ev) {
+    if (KEYCODE_MAP[ev.keyCode]) {
+      closeModal();
     }
   });
 })();
