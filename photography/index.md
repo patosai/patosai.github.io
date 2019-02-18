@@ -28,6 +28,7 @@ photos:
 </div>
 
 <div id="modal" class="modal">
+  <div id="modal-close">X</div>
   <div class="modal-inner">
     <img id="modal-image" src="" alt=""/>
     <div class="info">
@@ -135,6 +136,9 @@ photos:
     if (KEYCODE_MAP[ev.keyCode]) {
       closeModal();
     }
+  });
+  document.getElementById('modal-close').addEventListener('click', function(ev) {
+    closeModal();
   });
 })();
 </script>
