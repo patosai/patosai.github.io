@@ -4,6 +4,9 @@ title: Photography
 hide-title: true
 permalink: /photography
 photos:
+  - src: "40californiastrain.jpg"
+    caption: "California St. in the rain"
+    location: "San Francisco, CA, US"
   - src: "39sunset.jpg"
     caption: "Sunset"
     location: "Lands End, San Francisco, CA, US"
