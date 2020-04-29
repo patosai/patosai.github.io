@@ -5,7 +5,7 @@ date:   2015-03-01 12:00:00 -0500
 permalink: /:categories/:title
 ---
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+{% include mathjax.html %}
 
 *The original post is below, written in March 2015. A reflection on this project from April 2019 is at the bottom of the post.*
 
