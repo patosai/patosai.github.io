@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  Why the Fast Fourier Transform is fast
+title:  Derivation of the Fast Fourier Transform
 date:   2020-04-20 17:30:00 -0700
 permalink: /:categories/:title
 ---
