@@ -242,7 +242,9 @@ photos:
       getExifData(modalImage, function(exifData) {
         document.getElementById('caption').innerText = target.getAttribute('alt');
         document.getElementById('location').innerText = target.getAttribute('location');
-        document.getElementById('camera-model').innerText = exifData.Model;
+        if (!!exifData.Model) {
+          document.getElementById('camera-model').innerText = exifData.Model;
+        }
         if (exifData.LensModel == "EF-S18-135mm f/3.5-5.6 IS") {
           document.getElementById('lens-model').innerText = "Canon EF-S 18-135mm f/3.5-5.6 IS";
         } else if (exifData.LensModel) {
