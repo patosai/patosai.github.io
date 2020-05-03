@@ -1,5 +1,5 @@
 set encoding utf8
-set terminal svg size 500,500 font "Source Sans,16"
+set terminal svg size 400,250 font "Source Sans,16"
 set output 'aliasing.svg'
 
 set xrange [0:3*pi]
