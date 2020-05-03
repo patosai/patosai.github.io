@@ -25,7 +25,7 @@ The Fourier Transform is a **complex** operation. Looking back at Euler's formul
 
 <img class="img" src="assets/posts/2020-04-20-fourier-transform/eulers-formula.svg" alt="Diagram showing Euler's formula on the complex coordinate system"/>
 
-The diagram makes it clear that a signal that correlates exactly with cosine will have a phase shift of 0 or $$\pi$$, depending on the sign of the signal. For sine, it's $$\frac{\pi}{2}$$ or $$\frac{3\pi}{2}$$. The phase shift in general can be calculated by
+The diagram makes it clear that a signal that correlates exactly with cosine will have a phase shift of 0 or $$\pi$$, depending on the sign of the signal. For sine, it's $$\pm\frac{\pi}{2}$$. The phase shift in general can be calculated by
 
 $$\theta = \mathrm{arctan}(\frac{sin(\theta)}{cos(\theta)}) = \mathrm{arctan}(\frac{\text{imaginary part}}{\text{real part}})$$
 
