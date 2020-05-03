@@ -17,7 +17,7 @@ The Fourier Transform for a series of $$N$$ complex numbers $$x_k$$ for $$k = 0,
 
 $$X_k = \sum_{n=0}^{N-1} x_n e^{\frac{-j2\pi}{N}kn}$$
 
-Each $$k$$ represents a different frequency (the relation between $$k$$ and its frequency will be discussed soon). From Euler's formula, we know that $$e^{j\theta} = \mathrm{cos(\theta)} + j\mathrm{sin(\theta)}$$, where $$j$$ is the imaginary operator.
+Each $$k$$ represents a different frequency (the relation between $$k$$ and its frequency will be discussed soon). From Euler's formula, we know that $$e^{j\theta} = \mathrm{cos(\theta)} + j\mathrm{sin(\theta)}$$, where $$j$$ is the imaginary unit.
 - As $$n$$ goes from $$0$$ to $$N-1$$, $$e^{\frac{-j2\pi}{N}kn}$$ completes almost one full cycle ($$2\pi$$ radians, or 360 degrees) for a sinusoidal signal that has a frequency the same as the one associated with $$k$$
 - The summation is attempting to calculate how well the signal correlates with that sinusoidal signal
 
