@@ -18,8 +18,8 @@ The Fourier Transform for a series of $$N$$ complex numbers $$x_k$$ for $$k = 0,
 $$X_k = \sum_{n=0}^{N-1} x_n e^{\frac{-j2\pi}{N}kn}$$
 
 Each $$k$$ represents a different frequency (the relation between $$k$$ and its frequency will be discussed soon). From Euler's formula, we know that $$e^{j\theta} = \mathrm{cos(\theta)} + j\mathrm{sin(\theta)}$$, where $$j$$ is the imaginary unit.
-- As $$n$$ goes from $$0$$ to $$N-1$$, $$e^{\frac{-j2\pi}{N}kn}$$ completes almost one full cycle ($$2\pi$$ radians, or 360 degrees) for a sinusoidal signal that has a frequency the same as the one associated with $$k$$
-- The summation is attempting to calculate how well the signal correlates with that sinusoidal signal
+- As $$n$$ goes from $$0$$ to $$N-1$$, $$e^{\frac{-j2\pi}{N}kn}$$ completes almost $$k$$ full cycles around the complex unit circle defined by Euler's formula, each cycle being $$2\pi$$ radians, or 360 degrees
+- The summation is attempting to calculate how well the signal correlates with a sinusoidal signal, the frequency of which is the one associated with $$k$$
 
 The Fourier Transform is a **complex** operation. Looking back at Euler's formula, the imaginary part comes from $$sin$$ instead of $$cos$$, but the difference between the two is a phase shift. If a signal correlates completely with cosine, the result will be real. For sine, it will be completely imaginary. If it's complex, the phase shift of the signal with respect to cosine is something else. The phase shift in all cases can be calculated by looking back once again at Euler's formula.
 
