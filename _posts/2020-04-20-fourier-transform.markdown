@@ -9,11 +9,11 @@ permalink: /:categories/:title
 
 ###### What's the Fourier Transform?
 
-Given a sampled signal, the Fourier Transform returns the frequencies that make up the signal.
+Given a signal, the Fourier Transform returns the frequencies that make up the signal. The signal can either be continuous or sampled; the equation for the Fourier Transform differs slightly between the two. In this article, the Discrete Fourier Transform will be discussed, but the same ideas can be applied to the continuous version as well.
 
 ###### How does the algorithm do it, and what do the results mean?
 
-The Fourier Transform for a series of $$N$$ complex numbers $$x_k$$ for $$k = 0, 1, \dots, N-1$$ is defined as
+The Discrete Fourier Transform for a series of $$N$$ complex numbers $$x_k$$ for $$k = 0, 1, \dots, N-1$$ is defined as
 
 $$X_k = \sum_{n=0}^{N-1} x_n e^{\frac{-j2\pi}{N}kn}$$
 
