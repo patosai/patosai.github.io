@@ -101,13 +101,6 @@ img {
   margin: $img-margin auto;
 }
 
-input {
-  width: 50%;
-  @media(max-device-width: $mobile-max-device-width) {
-    width: 100%;
-  }
-}
-
 p {
   @include element-spacing;
   line-height: $line-height;
