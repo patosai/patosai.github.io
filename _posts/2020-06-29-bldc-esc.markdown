@@ -9,7 +9,7 @@ permalink: /:categories/:title
 
 In my quest to build an electric scooter from the ground up, the first step is to build a speed controller for the motor. Given that brushless DC motors (BLDC) are readily available in hobby shops, are high efficiency, and relatively inexpensive, the plan is to build a controller for a BLDC motor.
 
-The brushless DC motor is a high-efficiency motor which uses permanent magnets on the rotor, and electromagnets on the stator to control the rotation of the rotor. The rotor and stator are only attached via bearings which support the rotor as it spins; the small contact area allows for the high effiency of the motor.
+The brushless DC motor is a high-efficiency motor which uses permanent magnets on the rotor, and electromagnets on the stator to control the rotation of the rotor. The rotor and stator are only attached via bearings which support the rotor as it spins; the small contact area allows for the high efficiency of the motor.
 
 In order to make the rotor spin in a desired direction, the electromagnets must be activated in a certain order to attract the magnets on the rotor to the electromagnets on the stator. This magnetic attraction is what causes the rotor to spin, and the sequence of steps is called the commutation sequence.
 
