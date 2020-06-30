@@ -25,6 +25,10 @@ img.img {
   &.right {
     float: right;
   }
+
+  &.small {
+    max-height: 200px;
+  }
 }
 
 .pre-white-space {

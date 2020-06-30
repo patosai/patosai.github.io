@@ -13,7 +13,7 @@ The brushless DC motor is a high-efficiency motor which uses permanent magnets o
 
 In order to make the rotor spin in a desired direction, the electromagnets must be activated in a certain order to attract the magnets on the rotor to the electromagnets on the stator. This magnetic attraction is what causes the rotor to spin, and the sequence of steps is called the commutation sequence.
 
-<img class="img" src='/assets/posts/2020-06-29-bldc-esc/bldc-animation.gif' alt='Animation showing BLDC commutation' />
+<img class="img small" src='/assets/posts/2020-06-29-bldc-esc/bldc-animation.gif' alt='Animation showing BLDC commutation' />
 
 In the animation above. you can see that as the stators are energized in order, the rotor "chases" the magnetic fields. This is the basic commutation sequence for BLDC motors.
 
