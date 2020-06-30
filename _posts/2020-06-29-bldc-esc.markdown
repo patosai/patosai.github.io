@@ -1,0 +1,45 @@
+---
+layout: default
+title:  Three-phase brushless DC motor electronic speed controller (BLDC ESC) - in development
+date:   2020-06-29 15:00:00 -0700
+permalink: /:categories/:title
+---
+
+{% include mathjax.html %}
+
+In my quest to build an electric scooter from the ground up, the first step is to build a speed controller for the motor. Given that brushless DC motors (BLDC) are readily available in hobby shops, are high efficiency, and relatively inexpensive, the plan is to build a controller for a BLDC motor.
+
+The brushless DC motor is a high-efficiency motor which uses permanent magnets on the rotor, and electromagnets on the stator to control the rotation of the rotor. The rotor and stator are only attached via bearings which support the rotor as it spins; the small contact area allows for the high effiency of the motor.
+
+In order to make the rotor spin in a desired direction, the electromagnets must be activated in a certain order to attract the magnets on the rotor to the electromagnets on the stator. This magnetic attraction is what causes the rotor to spin, and the sequence of steps is called the commutation sequence.
+
+<img class="img" src='/assets/posts/2020-06-29-bldc-esc/bldc-animation.gif' alt='Animation showing BLDC commutation' />
+
+In the animation above. you can see that as the stators are energized in order, the rotor "chases" the magnetic fields. This is the basic commutation sequence for BLDC motors.
+
+In order to maximize torque on the rotor, the field applied by the stator should be at an angle of 90 degrees to the orientation of the rotor. The relationship between torque $$\tau$$, magnetic moment $$m$$ of the rotor, and the field supplied by the stator $$B$$ is
+
+$$\tau = m \times B$$
+
+The cross product is at is greatest when the vectors are at right angles to each other. The control algorithm used to try to maintain the 90 degree separation is called field-oriented control (FOC).
+
+<hr>
+
+### Design
+
+Common battery packs for hobby electronics don't usually, exceed 60V, so the main parts I chose were:
+- **IRFS7530** MOSFETs for its 60V $$V_{DSS}$$, low $$R_{DS(on)}$$ for minimal power dissipation, and high continuous and pulsed current capability (240A and 1000A+, respectively)
+- **DRV8353RS** triple gate driver to drive the MOSFETs; it's an all in one package that can be programmed by a microcontroller via SPI, and has a lot of other useful capabilities like current sense on all three phases and different PWM input modes to control the half bridges
+- **STM32F407** microcontroller; I heard online it's powerful enough to run FOC code with plenty of computing power to spare, plus I like the STM32F4
+
+This is the render after wrapping up the rest of the schematics and laying out the PCB.
+
+<img class="img" src='/assets/posts/2020-06-29-bldc-esc/esc-v1-render.jpg' alt='Rendering of the v1 ESC' />
+
+After getting it produced through OSH Park, soldering a minimal amount of components to the board, and debugging it for a while, I finally got LEDs to light up.
+
+<img class="img" src='/assets/posts/2020-06-29-bldc-esc/first-light.jpg' alt='Microcontroller on the v1 ESC working for the first time' />
+
+More coming soon...
+
+*last updated June 29, 2020*
