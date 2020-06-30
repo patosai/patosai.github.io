@@ -36,7 +36,7 @@ This is the render after wrapping up the rest of the schematics and laying out t
 
 <img class="img" src='/assets/posts/2020-06-29-bldc-esc/esc-v1-render.jpg' alt='Rendering of the v1 ESC' />
 
-After getting it produced through OSH Park, soldering a minimal amount of components to the board, and debugging it for a while, I finally got LEDs to light up.
+After getting it produced through OSH Park, soldering a minimal amount of components to the board, and debugging it for a while, I finally got LEDs to blink.
 
 <img class="img" src='/assets/posts/2020-06-29-bldc-esc/first-light.jpg' alt='Microcontroller on the v1 ESC working for the first time' />
 
