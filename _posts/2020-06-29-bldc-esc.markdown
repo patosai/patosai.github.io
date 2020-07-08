@@ -32,7 +32,7 @@ Common battery packs for hobby electronics don't usually exceed 60V, so the main
 - **DRV8353RS** triple gate driver to drive the MOSFETs; it's an all in one package that can be programmed by a microcontroller via SPI, and has a lot of other useful capabilities like current sense on all three phases
 - **STM32F407** microcontroller; I heard online it's powerful enough to run FOC code with plenty of computing power to spare, plus I like the STM32F4
 
-This is the render after wrapping up the rest of the schematics and laying out the PCB.
+This is the render after wrapping up the rest of the schematics and laying out the PCB. The PCB has four layers - signal on the top and bottom, and power and ground planes in the middle. The signal layers have copper pours to handle the large current loads the MOSFETs will experience.
 
 <img class="img" src='/assets/posts/2020-06-29-bldc-esc/esc-v1-render.jpg' alt='Rendering of the v1 ESC' />
 
