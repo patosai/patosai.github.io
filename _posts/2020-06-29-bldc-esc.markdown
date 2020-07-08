@@ -27,17 +27,19 @@ The cross product is at is greatest when the vectors are at right angles to each
 
 ### Design
 
-Common battery packs for hobby electronics don't usually, exceed 60V, so the main parts I chose were:
-- **IRFS7530** MOSFETs for its 60V $$V_{DSS}$$, low $$R_{DS(on)}$$ for minimal power dissipation, and high continuous and pulsed current capability (240A and 1000A+, respectively)
-- **DRV8353RS** triple gate driver to drive the MOSFETs; it's an all in one package that can be programmed by a microcontroller via SPI, and has a lot of other useful capabilities like current sense on all three phases and different PWM input modes to control the half bridges
+Common battery packs for hobby electronics don't usually exceed 60V, so the main parts I chose were:
+- **IRFS7530** MOSFETs for its 60V $$V_{DS}$$, low $$R_{DS}$$ for minimal power dissipation, and high continuous and pulsed current capability (240A and 1000A+, respectively)
+- **DRV8353RS** triple gate driver to drive the MOSFETs; it's an all in one package that can be programmed by a microcontroller via SPI, and has a lot of other useful capabilities like current sense on all three phases
 - **STM32F407** microcontroller; I heard online it's powerful enough to run FOC code with plenty of computing power to spare, plus I like the STM32F4
 
 This is the render after wrapping up the rest of the schematics and laying out the PCB.
 
 <img class="img" src='/assets/posts/2020-06-29-bldc-esc/esc-v1-render.jpg' alt='Rendering of the v1 ESC' />
 
-After getting it produced through OSH Park, soldering a minimal amount of components to the board, and debugging it for a while, I finally got LEDs to blink.
+I got the boards made through OSH Park, and one day they finally arrived in the mail.
+<img class="img" src='/assets/posts/2020-06-29-bldc-esc/boards.jpg' alt='Bare PCBs from OSH Park' />
 
+After soldering a minimal amount of components to a board and debugging it for a while, I finally got LEDs to blink.
 <img class="img" src='/assets/posts/2020-06-29-bldc-esc/first-light.jpg' alt='Microcontroller on the v1 ESC working for the first time' />
 
 More coming soon...
