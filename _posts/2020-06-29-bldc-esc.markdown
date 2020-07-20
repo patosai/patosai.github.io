@@ -25,21 +25,21 @@ The cross product is at is greatest when the vectors are at right angles to each
 
 <hr>
 
-### Design
+### PCB Design
 
 Common battery packs for hobby electronics don't usually exceed 60V, so the main parts I chose were:
 - **IRFS7530** MOSFETs for its 60V $$V_{DS}$$, low $$R_{DS}$$ for minimal power dissipation, and high continuous and pulsed current capability (240A and 1000A+, respectively)
-- **DRV8353RS** triple gate driver to drive the MOSFETs; it's an all in one package that can be programmed by a microcontroller via SPI, and has a lot of other useful capabilities like current sense on all three phases
-- **STM32F407** microcontroller; I heard online it's powerful enough to run FOC code with plenty of computing power to spare, plus I like the STM32F4
+- **DRV8353RS** triple half-bridge driver to drive the MOSFETs; it's an all in one package that can be programmed by a microcontroller via SPI, and has a lot of other useful capabilities like current sense on all three phases
+- **STM32F407** microcontroller; it has plenty of compute power and peripherals, and a lot of community support. I like the STM32s a lot.
 
-This is the render after wrapping up the rest of the schematics and laying out the PCB. The PCB has four layers - signal on the top and bottom, and power and ground planes in the middle. The signal layers have copper pours to handle the large current loads the MOSFETs will experience.
+There are six MOSFETs arranged in three half-bridges, one for each phase of the three-phase BLDC. Each half-bridge has a current sense resistor on the low-side. The max amperage of the IRFS7530 is insanely high, 240A, so it's likely that temperature increase on the PCB, MOSFETs, or the sense resistors will be the limiting factor in current capacity. Besides possibly adding heatsinks to the MOSFETs and/or PCBs, the traces carrying all the current on the PCB have to be wide enough to reduce resistance and prevent heating, and all wires soldered to the motor/battery need to be thick enough to handle all the current.
+
+To minimize resistance on the board, I just did a huge copper pour on the top/bottom layers and stitched them together with vias; together with the internal planes, both VDD and GND have three large traces to go through. I also removed thermal reliefs on all vias and pads on the MOSFETs and sense resistors which should help with reducing resistance, but made soldering those components difficult.
 
 <img class="img" src='/assets/posts/2020-06-29-bldc-esc/esc-v1-render.jpg' alt='Rendering of the v1 ESC' />
-
-I got the boards made through OSH Park, and one day they finally arrived in the mail.
 <img class="img" src='/assets/posts/2020-06-29-bldc-esc/boards.jpg' alt='Bare PCBs from OSH Park' />
 
-After soldering a minimal amount of components to a board and debugging it for a while, I finally got LEDs to blink.
+I got the boards made through OSHPark, and after soldering a minimal amount of components to a board and debugging it for a while, I finally got LEDs to blink.
 <img class="img" src='/assets/posts/2020-06-29-bldc-esc/first-light.jpg' alt='Microcontroller on the v1 ESC working for the first time' />
 
 More coming soon...
