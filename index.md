@@ -2,9 +2,9 @@
 layout: default
 ---
 
-I'm Patrick Tsai, a software engineer and electronics hacker. 🇹🇼 🇺🇸 This is my corner of the Internet.
+I'm Patrick Tsai. Occasionally I blog here, most about software/electrical engineering projects.
 
-I sometimes do photography, and <a href="/photography">some of my favorite photography can be seen here</a>. It's mostly nature related.
+I sometimes take photographs, and <a href="/photography">some of my favorite photography can be seen here</a>. It's mostly nature related.
 
 <hr>
 
