@@ -45,3 +45,9 @@ I got the boards made through OSHPark, and after soldering a minimal amount of c
 More coming soon...
 
 *last updated June 29, 2020*
+
+#### Update Sept. 2020
+
+I decided to make my bike electric instead of making a separate electric scooter, so I bought a 48V front wheel motor for my bike. While testing the ESC with the motor, the DRV8353 appears to have blown up internally somehow, as the idle current is now 0.13A at 15V instead of the ~0.01A as usual - the chip is super hot by touch so the energy is probably going to a short somewhere. I'm not totally surprised it died, given how many reports I read on the Internet of DRV chips dying during usage - just search "DRV blew up" and you'll see.
+
+My power supply is cheap so it may have been a voltage pulse on VDD that killed the DRV8353, but the supply was only set at 15V. I'm not seeing too many other possibilities for failure, but next version I'll have clamping diodes on everything.
